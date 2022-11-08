@@ -35,19 +35,22 @@ header nav {
     position: relative;
 }
 
-.fa-magnifying-glass {
+header .container {
+    height: 38px;
+}
+
+header .container .glass .fa-magnifying-glass {
     font-size: 15px;
     position: relative;
-    top: 1px;
-    right: -25px
+    left: 256%;
+    top: -26px;
 }
 
 .fa-magnifying-glass:hover {
     background-color: #009688;
     padding: 12px 15px;
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-top: -15px;
+    margin-left: -10px;
     cursor: pointer;
 }
 
@@ -120,11 +123,16 @@ header .fa-house {
     padding-right: 15px;
 }
 
+header input {
+    display: none;
+}
+
 header .fa-bars {
     display: none;
     padding-right: 20px;
     position: absolute;
     right: 0;
+    top: 13px
 }
 
 header nav span {
@@ -137,18 +145,20 @@ header .fa-bars:hover {
     color: black;
     padding: 10px 15px;
     cursor: pointer;
+    top: 0;
 }
 
-header .fa-bars:active+nav {
+header input:checked~.container nav {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 38px;
+    left: -1px;
     width: 800px;
     background-color: black;
 }
 
-header .fa-bars:active+nav .drop {
+header input:checked~.container nav .drop {
     display: none;
 }
 
